@@ -10,10 +10,8 @@
 #endif
 #endif
 
-#import "Croissant.h"
-#import "CRInspector.h"
-#import "CRWebServer.h"
+#import "fishhook.h"
 
-FOUNDATION_EXPORT double CroissantVersionNumber;
-FOUNDATION_EXPORT const unsigned char CroissantVersionString[];
+FOUNDATION_EXPORT double fishhookVersionNumber;
+FOUNDATION_EXPORT const unsigned char fishhookVersionString[];
 

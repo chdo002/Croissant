@@ -22,6 +22,9 @@
   "dependencies": {
     "GCDWebServer": [
       "3.5.3"
+    ],
+    "fishhook": [
+
     ]
   }
 }

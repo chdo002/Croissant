@@ -41,5 +41,6 @@ TODO: Add long description of the pod here.
   
 
   s.dependency 'GCDWebServer', '3.5.3'
+  s.dependency 'fishhook'
   
 end

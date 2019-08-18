@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-iOS_Example/Pods-iOS_Example-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Croissant/Croissant.framework
 ${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework
+${BUILT_PRODUCTS_DIR}/fishhook/fishhook.framework
