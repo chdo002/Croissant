@@ -1,0 +1,6 @@
+framework module Croissant {
+  umbrella header "Croissant-umbrella.h"
+
+  export *
+  module * { export * }
+}

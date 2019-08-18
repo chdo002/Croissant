@@ -1,0 +1,25 @@
+PODS:
+  - Croissant (0.1.0):
+    - GCDWebServer (= 3.5.3)
+  - GCDWebServer (3.5.3):
+    - GCDWebServer/Core (= 3.5.3)
+  - GCDWebServer/Core (3.5.3)
+
+DEPENDENCIES:
+  - Croissant (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - GCDWebServer
+
+EXTERNAL SOURCES:
+  Croissant:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Croissant: 7d41fdd850537e7302d0a0e70cc8e86811d1ea39
+  GCDWebServer: c0ab22c73e1b84f358d1e2f74bf6afd1c60829f2
+
+PODFILE CHECKSUM: 9cb0a7fe91a6cb623a0c22d66a699e34f16d554e
+
+COCOAPODS: 1.7.5

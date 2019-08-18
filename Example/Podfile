@@ -1,6 +1,0 @@
-use_frameworks!
-target 'Croissant_Tests' do
-  pod 'Croissant', :path => '../'
-  
-  
-end
