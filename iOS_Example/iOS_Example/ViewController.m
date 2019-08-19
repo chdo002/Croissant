@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <Croissant/Croissant.h>
 
 @interface ViewController ()
 
@@ -19,6 +20,18 @@
     // Do any additional setup after loading the view.
     
 }
+
+- (IBAction)shareAction:(id)sender {
+    
+    [Croissant.shareInstance shareServeURL];
+    
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"%@",event.description);
+}
+
 
 
 @end

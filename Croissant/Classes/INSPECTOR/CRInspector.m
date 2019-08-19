@@ -36,7 +36,7 @@ void cr_nslog(NSString *format, ...) {
     }
 }
 
-- (CRInspector *)shareInstance
++ (CRInspector *)shareInstance
 {
     static dispatch_once_t onceToken;
     static CRInspector *share;

@@ -19,11 +19,19 @@
     "ios": "8.0"
   },
   "source_files": "Croissant/Classes/**/*",
+  "resource_bundles": {
+    "Croissant": [
+      "Croissant/Assets/*.bundle"
+    ]
+  },
   "dependencies": {
     "GCDWebServer": [
       "3.5.3"
     ],
     "fishhook": [
+
+    ],
+    "PocketSocket": [
 
     ]
   }

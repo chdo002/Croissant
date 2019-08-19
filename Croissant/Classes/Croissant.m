@@ -8,7 +8,7 @@
 #import "Croissant.h"
 
 #import "CRInspector.h"
-#import "CRWebServer.h"
+#import "CRServer.h"
 
 
 @interface Croissant()
@@ -45,6 +45,10 @@ static Croissant *share;
 {
     _enabled = enabled;
     if (enabled) {
+        
+        [CRServer.shareInstance startWebServer];
+        [CRServer.shareInstance startSocket];
+        
         [self setUpInspect];
     }
 }
@@ -53,8 +57,14 @@ static Croissant *share;
 - (void)setUpInspect
 {
     CRInspector.shareInstance.logCallBack = ^(NSString * _Nonnull log) {
-        
+        [CRServer.shareInstance sendMessage:log];
     };
+}
+
+- (void)shareServeURL
+{
+    UIActivityViewController *act = [[UIActivityViewController alloc] initWithActivityItems:@[CRServer.shareInstance.serveUrl] applicationActivities:nil];
+    [UIApplication.sharedApplication.delegate.window.rootViewController presentViewController:act animated:YES completion:nil];
 }
 
 @end

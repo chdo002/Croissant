@@ -2,10 +2,20 @@ PODS:
   - Croissant (0.1.0):
     - fishhook
     - GCDWebServer (= 3.5.3)
+    - PocketSocket
   - fishhook (0.2)
   - GCDWebServer (3.5.3):
     - GCDWebServer/Core (= 3.5.3)
   - GCDWebServer/Core (3.5.3)
+  - PocketSocket (1.0.1):
+    - PocketSocket/Client (= 1.0.1)
+    - PocketSocket/Core (= 1.0.1)
+    - PocketSocket/Server (= 1.0.1)
+  - PocketSocket/Client (1.0.1):
+    - PocketSocket/Core
+  - PocketSocket/Core (1.0.1)
+  - PocketSocket/Server (1.0.1):
+    - PocketSocket/Client
 
 DEPENDENCIES:
   - Croissant (from `../`)
@@ -14,16 +24,18 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - fishhook
     - GCDWebServer
+    - PocketSocket
 
 EXTERNAL SOURCES:
   Croissant:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Croissant: 3ab67f1e8022a571cc2d3e02d8e778ff6ce18983
+  Croissant: 3e6fc9f4d62d2159154d7e41db0a50098a2ec36b
   fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
   GCDWebServer: c0ab22c73e1b84f358d1e2f74bf6afd1c60829f2
+  PocketSocket: 9c6867d66fb4f962af96b9b07f4b45bb561b2c2a
 
-PODFILE CHECKSUM: 9cb0a7fe91a6cb623a0c22d66a699e34f16d554e
+PODFILE CHECKSUM: 23f0c6d6984bb8794bd4371d33d9babf33cf46ca
 
 COCOAPODS: 1.7.5

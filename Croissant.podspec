@@ -32,9 +32,9 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'Croissant/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'Croissant' => ['Croissant/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'Croissant' => ['Croissant/Assets/*.bundle']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
@@ -42,5 +42,6 @@ TODO: Add long description of the pod here.
 
   s.dependency 'GCDWebServer', '3.5.3'
   s.dependency 'fishhook'
+  s.dependency 'PocketSocket'
   
 end
