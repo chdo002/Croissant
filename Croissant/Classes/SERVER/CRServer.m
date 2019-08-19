@@ -65,7 +65,7 @@
 - (void)startWebServer
 {
     if (!self.webServer.running) {
-        [self.webServer startWithPort:7071 bonjourName:nil];
+        [self.webServer startWithPort:9071 bonjourName:nil];
     }
 }
 
