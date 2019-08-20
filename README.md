@@ -20,6 +20,12 @@ it, simply add the following line to your Podfile:
 pod 'Croissant'
 ```
 
+## Understanding Croissant Architecture
+
+`Croissant`: receive `CRInspector` messages, and send to  `CRServer`
+`CRInspector`:   observe printing and network tracffic
+`CRServer` :   webserver, socket provider
+
 ## Author
 
 chdo002, 1107661983@qq.com

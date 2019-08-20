@@ -50,12 +50,17 @@ static Croissant *share;
         [CRServer.shareInstance startSocket];
         
         [self setUpInspect];
+        
+    } else {
+        
+        
     }
 }
 
 
 - (void)setUpInspect
 {
+    [CRInspector.shareInstance hookNSLog];
     CRInspector.shareInstance.logCallBack = ^(NSString * _Nonnull log) {
         [CRServer.shareInstance sendMessage:log];
     };

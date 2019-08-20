@@ -18,11 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]];
-    [[NSURLSession.sharedSession dataTaskWithRequest:req completionHandler:^(NSData * _Nullable data,
-                                                                             NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        
-    }] resume];
+    
 }
 
 - (IBAction)shareAction:(id)sender {

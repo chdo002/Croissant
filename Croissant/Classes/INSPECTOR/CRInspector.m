@@ -11,13 +11,23 @@
 
 @implementation CRInspector
 
-+ (void)initialize
++ (CRInspector *)shareInstance
 {
-    if (self == [CRInspector class]) {
-        
-        struct rebinding nslog_rebinding = {"NSLog",cr_nslog,(void*)&orig_nslog};
-        rebind_symbols((struct rebinding[1]){nslog_rebinding}, 1);
-    }
+    static dispatch_once_t onceToken;
+    static CRInspector *share;
+    dispatch_once(&onceToken, ^{
+        share = CRInspector.new;
+    });
+    
+    return share;
+}
+
++ (void)setShareInstance:(CRInspector *)shareInstance{}
+
+- (void)hookNSLog
+{
+    struct rebinding nslog_rebinding = {"NSLog",cr_nslog,(void*)&orig_nslog};
+    rebind_symbols((struct rebinding[1]){nslog_rebinding}, 1);
 }
 
 static void (*orig_nslog)(NSString *format, ...);
@@ -36,18 +46,10 @@ void cr_nslog(NSString *format, ...) {
     }
 }
 
-+ (CRInspector *)shareInstance
+- (void)hookNetWork
 {
-    static dispatch_once_t onceToken;
-    static CRInspector *share;
-    dispatch_once(&onceToken, ^{
-        share = CRInspector.new;
-    });
-    
-    return share;
+    NSURLSession.sharedSession dataTaskWithRequest:<#(nonnull NSURLRequest *)#> completionHandler:<#^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)completionHandler#>
 }
-
-+ (void)setShareInstance:(CRInspector *)shareInstance{}
 
 
 @end
