@@ -39,8 +39,8 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   
-  s.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'DD_LEGACY_MACROS=1' }
-  
+#  s.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'DD_LEGACY_MACROS=1' }
+
   s.dependency 'GCDWebServer', '3.5.3'
   s.dependency 'fishhook'
   s.dependency 'PocketSocket'

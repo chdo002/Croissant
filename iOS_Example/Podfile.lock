@@ -45,7 +45,7 @@ SPEC CHECKSUMS:
   CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
   CocoaHTTPServer: 5624681fc3473d43b18202f635f9b3abb013b530
   CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
-  Croissant: c5499498f4e8eb5459dd5bab17f1bd3bd87e1672
+  Croissant: ff55842704fb8622b2151c30ec8e41e56c575f90
   fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
   GCDWebServer: c0ab22c73e1b84f358d1e2f74bf6afd1c60829f2
   PocketSocket: 9c6867d66fb4f962af96b9b07f4b45bb561b2c2a
