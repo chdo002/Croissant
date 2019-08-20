@@ -48,7 +48,7 @@ void cr_nslog(NSString *format, ...) {
 
 - (void)hookNetWork
 {
-    NSURLSession.sharedSession dataTaskWithRequest:<#(nonnull NSURLRequest *)#> completionHandler:<#^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)completionHandler#>
+    
 }
 
 

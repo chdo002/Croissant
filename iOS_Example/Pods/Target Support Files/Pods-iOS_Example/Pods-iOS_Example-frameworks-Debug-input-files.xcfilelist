@@ -1,4 +1,7 @@
 ${PODS_ROOT}/Target Support Files/Pods-iOS_Example/Pods-iOS_Example-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework
+${BUILT_PRODUCTS_DIR}/CocoaHTTPServer/CocoaHTTPServer.framework
+${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework
 ${BUILT_PRODUCTS_DIR}/Croissant/Croissant.framework
 ${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework
 ${BUILT_PRODUCTS_DIR}/PocketSocket/PocketSocket.framework

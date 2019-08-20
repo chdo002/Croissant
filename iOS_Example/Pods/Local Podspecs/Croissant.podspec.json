@@ -24,6 +24,9 @@
       "Croissant/Assets/*.bundle"
     ]
   },
+  "xcconfig": {
+    "GCC_PREPROCESSOR_DEFINITIONS": "DD_LEGACY_MACROS=1"
+  },
   "dependencies": {
     "GCDWebServer": [
       "3.5.3"
@@ -32,6 +35,9 @@
 
     ],
     "PocketSocket": [
+
+    ],
+    "CocoaHTTPServer": [
 
     ]
   }
