@@ -37,7 +37,7 @@ TODO: Add long description of the pod here.
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks = 'UIKit', 'CoreServices'
   
 #  s.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'DD_LEGACY_MACROS=1' }
 

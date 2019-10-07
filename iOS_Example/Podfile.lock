@@ -3,9 +3,9 @@ PODS:
   - CocoaHTTPServer (2.3):
     - CocoaAsyncSocket
     - CocoaLumberjack
-  - CocoaLumberjack (3.5.3):
-    - CocoaLumberjack/Core (= 3.5.3)
-  - CocoaLumberjack/Core (3.5.3)
+  - CocoaLumberjack (3.6.0):
+    - CocoaLumberjack/Core (= 3.6.0)
+  - CocoaLumberjack/Core (3.6.0)
   - Croissant (0.1.0):
     - CocoaHTTPServer
     - fishhook
@@ -44,12 +44,12 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
   CocoaHTTPServer: 5624681fc3473d43b18202f635f9b3abb013b530
-  CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
-  Croissant: ff55842704fb8622b2151c30ec8e41e56c575f90
+  CocoaLumberjack: 78b0c238666f4f58db069738ec176f4519557516
+  Croissant: 911eb43157bbbb337dc457156ae0f3053cd3aa86
   fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
   GCDWebServer: c0ab22c73e1b84f358d1e2f74bf6afd1c60829f2
   PocketSocket: 9c6867d66fb4f962af96b9b07f4b45bb561b2c2a
 
 PODFILE CHECKSUM: 7042673e274854168d900395cd77170f21fa19eb
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.6.2

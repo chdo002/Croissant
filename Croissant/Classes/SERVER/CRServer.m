@@ -10,6 +10,7 @@
 #import "GCDWebServer.h"
 #import "GCDWebServerDataResponse.h"
 #import "PSWebSocketServer.h"
+#import "CRServerResource.h"
 
 @interface CRServer()<PSWebSocketServerDelegate>
 
@@ -18,7 +19,7 @@
 @property (nonatomic, strong) PSWebSocketServer *socketServer;
 @property (nonatomic, strong) PSWebSocket *webSocket;
 
-@property (nonatomic, copy) NSString *templeteHtml;
+@property (nonatomic, strong) CRServerResource *resource;
 
 @end
 
@@ -50,14 +51,30 @@
 - (void)setUpServer
 {
     __weak typeof(self) weakS = self;
+    
     [self.webServer addDefaultHandlerForMethod:@"GET"
                                   requestClass:GCDWebServerRequest.class
-                                  processBlock:^GCDWebServerResponse * _Nullable(__kindof GCDWebServerRequest * _Nonnull request)
-    {
-        NSString *html = [weakS.templeteHtml stringByReplacingOccurrencesOfString:@"replace_address"
-                                                                       withString:[NSString stringWithFormat:@"ws://%@:8080",weakS.webServer.serverURL.host]];
-        GCDWebServerResponse *resp = [GCDWebServerDataResponse responseWithHTML:html];
-        return resp;
+                                  processBlock:^GCDWebServerResponse *(GCDWebServerRequest *request)
+     {
+        NSString *filePath = [weakS.resource.bundlePath stringByAppendingPathComponent:request.path];
+        NSString *contentType = [weakS.resource getMIMETypeWithCAPIAtFilePath:filePath];
+        NSError *error;
+        NSData *data = [NSData.alloc initWithContentsOfFile:filePath options:0 error:&error];
+#if DEBUG
+        if (error) {
+            NSAssert(NO, error.description);
+        }
+#endif
+        return [GCDWebServerDataResponse responseWithData:data contentType:contentType];
+    }];
+    
+    [self.webServer addHandlerForMethod:@"GET"
+                                   path:@"/"
+                           requestClass:GCDWebServerRequest.class
+                           processBlock:^GCDWebServerResponse * (GCDWebServerRequest * request)
+     {
+        NSURL *url = [NSURL URLWithString:@"index.html" relativeToURL:request.URL];
+        return [GCDWebServerResponse.alloc initWithRedirect:url permanent:NO];
     }];
     
 }
@@ -88,16 +105,12 @@
 
 #pragma mark - GETTER
 
-- (NSString *)templeteHtml
+- (CRServerResource *)resource
 {
-    if (!_templeteHtml) {
-        NSString * bundlePath = [[NSBundle bundleForClass:self.class].resourcePath stringByAppendingPathComponent:@"Croissant.bundle"];
-        bundlePath = [bundlePath stringByAppendingPathComponent:@"Croissant.bundle"];
-        NSString *path = [bundlePath stringByAppendingPathComponent:@"index.html"];
-        NSMutableString *template = [[NSMutableString alloc] initWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-        _templeteHtml = template.copy;
+    if (!_resource) {
+        _resource = CRServerResource.alloc.init;
     }
-    return _templeteHtml;
+    return _resource;
 }
 
 - (NSURL *)serveUrl

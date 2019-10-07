@@ -24,6 +24,10 @@
       "Croissant/Assets/*.bundle"
     ]
   },
+  "frameworks": [
+    "UIKit",
+    "CoreServices"
+  ],
   "dependencies": {
     "GCDWebServer": [
       "3.5.3"

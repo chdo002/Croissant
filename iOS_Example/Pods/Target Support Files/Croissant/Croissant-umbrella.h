@@ -13,6 +13,7 @@
 #import "Croissant.h"
 #import "CRInspector.h"
 #import "CRServer.h"
+#import "CRServerResource.h"
 
 FOUNDATION_EXPORT double CroissantVersionNumber;
 FOUNDATION_EXPORT const unsigned char CroissantVersionString[];
