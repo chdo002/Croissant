@@ -45,8 +45,8 @@
     }
     return self;
 }
-+ (void)setShareInstance:(CRServer *)shareInstance{}
 
++ (void)setShareInstance:(CRServer *)shareInstance{}
 
 - (void)setUpServer
 {

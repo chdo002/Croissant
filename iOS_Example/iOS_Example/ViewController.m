@@ -32,6 +32,4 @@
     NSLog(@"%@",event.description);
 }
 
-
-
 @end

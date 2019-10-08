@@ -57,7 +57,6 @@ static Croissant *share;
     }
 }
 
-
 - (void)setUpInspect
 {
     [CRInspector.shareInstance hookNSLog];
