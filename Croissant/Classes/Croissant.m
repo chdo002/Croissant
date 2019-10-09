@@ -60,8 +60,17 @@ static Croissant *share;
 - (void)setUpInspect
 {
     [CRInspector.shareInstance hookNSLog];
+    
+    // 日志
     CRInspector.shareInstance.logCallBack = ^(NSString * _Nonnull log) {
-        [CRServer.shareInstance sendMessage:log];
+        NSDictionary *logDic = @{
+            @"type":@1,
+            @"content":log ?: @""
+        };
+        NSError *parseError = nil;
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:logDic options:NSJSONWritingPrettyPrinted error:&parseError];
+        NSString *message = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        [CRServer.shareInstance sendMessage:message];
     };
 }
 

@@ -175,6 +175,8 @@
 		E4738F64AB1AEA854B9EF441782D6FAC /* HTTPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFA16ABB1CFEE325D719E4B2BB34D29 /* HTTPMessage.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E5AD57E66E8FBBE32DB74C732BD6E916 /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = 4519E1E045A1437333C191445808235D /* fishhook.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E73F90DA300D441F814699F622D2E6B1 /* HTTPAsyncFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 055E9D55C77E28F5C2C1E170FB9CA8F3 /* HTTPAsyncFileResponse.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E94A0732234E25E900E1860C /* CRMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = E94A0730234E25E900E1860C /* CRMessage.h */; };
+		E94A0733234E25E900E1860C /* CRMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = E94A0731234E25E900E1860C /* CRMessage.m */; };
 		EA7D1AFEE7A571D9F62A15959C4F88D6 /* DDASLLogCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 826386213ADF26DD73D1AF071808716A /* DDASLLogCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EACD717C440A6EFE545BBF12B532A554 /* CRServerResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 97D700064D21CD840ED6C18B612665B6 /* CRServerResource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC8907F8B575EA29876D9E2F3163DAE1 /* HTTPDataResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CBCEDAF6198825E2021BED4320AEF4 /* HTTPDataResponse.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -312,7 +314,7 @@
 		01EDEA60B00CB8BD35A3164C4FF4C385 /* Croissant-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Croissant-dummy.m"; sourceTree = "<group>"; };
 		01F9B566C31B4F49C677B4E4FD18AAB4 /* CocoaHTTPServer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CocoaHTTPServer.modulemap; sourceTree = "<group>"; };
 		02C1969DDEC16820A560AB0BD4E57E0A /* HTTPLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTTPLogging.h; path = Core/HTTPLogging.h; sourceTree = "<group>"; };
-		02F8DA861D8735B43D7C7B9BFCD241FB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		02F8DA861D8735B43D7C7B9BFCD241FB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		03EE75F39F858A282039016F024D6C11 /* CocoaAsyncSocket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CocoaAsyncSocket.modulemap; sourceTree = "<group>"; };
 		055E9D55C77E28F5C2C1E170FB9CA8F3 /* HTTPAsyncFileResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTTPAsyncFileResponse.m; path = Core/Responses/HTTPAsyncFileResponse.m; sourceTree = "<group>"; };
 		09BE3EE2C06E739F4E8335578DBBE08E /* CLIColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLIColor.h; path = Sources/CocoaLumberjack/include/CLIColor.h; sourceTree = "<group>"; };
@@ -320,7 +322,7 @@
 		0A94B9AA495E40727EF5ABFAD225AD7B /* DDNumber.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDNumber.h; path = Core/Categories/DDNumber.h; sourceTree = "<group>"; };
 		0C0FE2B705B22FF46C02A2F2D2361B08 /* DDLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLog.h; path = Sources/CocoaLumberjack/include/DDLog.h; sourceTree = "<group>"; };
 		0E4F181D2FAF3966FDC4DA2E816726F6 /* GCDWebServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServer.h; path = GCDWebServer/Core/GCDWebServer.h; sourceTree = "<group>"; };
-		0FB9D9CBE8DE4128EB8A6FF33F2F4F6E /* CocoaHTTPServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoaHTTPServer.framework; path = CocoaHTTPServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FB9D9CBE8DE4128EB8A6FF33F2F4F6E /* CocoaHTTPServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaHTTPServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCC9087AF47B148FD730AB653104253 /* DDNumber.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDNumber.m; path = Core/Categories/DDNumber.m; sourceTree = "<group>"; };
 		14BF9B1AA63B5C1DF08DBEC49A0FACAF /* DDLog+LOGV.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DDLog+LOGV.h"; path = "Sources/CocoaLumberjack/include/DDLog+LOGV.h"; sourceTree = "<group>"; };
 		154A7A1E49B200E702A2ED19235AE893 /* Croissant.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Croissant.modulemap; sourceTree = "<group>"; };
@@ -329,14 +331,14 @@
 		178608783A9E3FAC28F331EA5FF6E625 /* DDFileLogger+Buffering.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DDFileLogger+Buffering.h"; path = "Sources/CocoaLumberjack/include/DDFileLogger+Buffering.h"; sourceTree = "<group>"; };
 		18E417D75B6C546C4140DFC866F98DEE /* CocoaLumberjack-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaLumberjack-prefix.pch"; sourceTree = "<group>"; };
 		1BC253C7C5BB7F689AB75ECE6286AFC4 /* PSWebSocketServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PSWebSocketServer.h; path = PocketSocket/PSWebSocketServer.h; sourceTree = "<group>"; };
-		1DAA2B6231D9C82D45C22946742EF48F /* Pods_iOS_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_iOS_ExampleTests.framework; path = "Pods-iOS_ExampleTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DAA2B6231D9C82D45C22946742EF48F /* Pods_iOS_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F341B97025D8B8C00D1844FE05469D4 /* DDTTYLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDTTYLogger.m; path = Sources/CocoaLumberjack/DDTTYLogger.m; sourceTree = "<group>"; };
 		1F5B1079D003866E61CCC23F00D8A36A /* MultipartMessageHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MultipartMessageHeader.h; path = Core/Mime/MultipartMessageHeader.h; sourceTree = "<group>"; };
-		2270824B05CB9E3C5E74DA60A44B990A /* Croissant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Croissant.framework; path = Croissant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2270824B05CB9E3C5E74DA60A44B990A /* Croissant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Croissant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CA79C67440C580475866B6890877D2 /* HTTPAuthenticationRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTTPAuthenticationRequest.h; path = Core/HTTPAuthenticationRequest.h; sourceTree = "<group>"; };
 		230816585FCB48C39528B23BCDF341EC /* CocoaAsyncSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-prefix.pch"; sourceTree = "<group>"; };
 		243D01776F0B4F1C31F987C024DC301E /* ResourceBundle-Croissant-Croissant-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Croissant-Croissant-Info.plist"; sourceTree = "<group>"; };
-		2853A74A55573663085E68036BC945EC /* fishhook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = fishhook.framework; path = fishhook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2853A74A55573663085E68036BC945EC /* fishhook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = fishhook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D2BD8D1AC48658683C79B625CCBBA91 /* DAVConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DAVConnection.h; path = Extensions/WebDAV/DAVConnection.h; sourceTree = "<group>"; };
 		30B143E8A1D380C2E6054C3086F63CF8 /* GCDWebServerMultiPartFormRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerMultiPartFormRequest.m; path = GCDWebServer/Requests/GCDWebServerMultiPartFormRequest.m; sourceTree = "<group>"; };
 		311E6FAD4864281FB4CBA446768C6184 /* GCDWebServerPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerPrivate.h; path = GCDWebServer/Core/GCDWebServerPrivate.h; sourceTree = "<group>"; };
@@ -360,7 +362,7 @@
 		44AC22FC27B09FCE1CC0CB5A27482851 /* Croissant.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Croissant.xcconfig; sourceTree = "<group>"; };
 		4519E1E045A1437333C191445808235D /* fishhook.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
 		4527C94E599B53079D2EE720FC776B38 /* Pods-iOS_ExampleUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iOS_ExampleUITests.modulemap"; sourceTree = "<group>"; };
-		4746F0CEA2F1373DBDDE5C2FC34C3F15 /* Croissant.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Croissant.bundle; path = "Croissant-Croissant.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4746F0CEA2F1373DBDDE5C2FC34C3F15 /* Croissant.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Croissant.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		4982C19941C67DE96AD3FB0F1DCD2E8A /* MultipartFormDataParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MultipartFormDataParser.h; path = Core/Mime/MultipartFormDataParser.h; sourceTree = "<group>"; };
 		4B3AB2449F05759C527FBC9A30055142 /* CocoaHTTPServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaHTTPServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B608AC05E266B345B3829A3D1DBC407 /* DAVResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DAVResponse.h; path = Extensions/WebDAV/DAVResponse.h; sourceTree = "<group>"; };
@@ -382,7 +384,7 @@
 		57FD4621B4F638588B35FC3EC98AE87F /* CRInspector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CRInspector.m; sourceTree = "<group>"; };
 		5855CA39BE0B14747E70FEF44011C02C /* HTTPFileResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTTPFileResponse.h; path = Core/Responses/HTTPFileResponse.h; sourceTree = "<group>"; };
 		5A1778FC4584367E28FD3734DC3256E7 /* Pods-iOS_ExampleUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iOS_ExampleUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		5A6BBF8CD004726C89237DCC5F4449A6 /* Pods_iOS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_iOS_Example.framework; path = "Pods-iOS_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A6BBF8CD004726C89237DCC5F4449A6 /* Pods_iOS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E04B972E34A080DEBB82DECFEBE50A3 /* HTTPConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTTPConnection.h; path = Core/HTTPConnection.h; sourceTree = "<group>"; };
 		5F8F2F8824B868589FCE2CDB31D871AB /* HTTPServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTTPServer.h; path = Core/HTTPServer.h; sourceTree = "<group>"; };
 		5FD795707F769B16D39BBC61B5933ECA /* GCDWebServerFunctions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerFunctions.h; path = GCDWebServer/Core/GCDWebServerFunctions.h; sourceTree = "<group>"; };
@@ -424,13 +426,13 @@
 		861827C8376DF2800E0BF805ABB998D0 /* DDFileLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDFileLogger.h; path = Sources/CocoaLumberjack/include/DDFileLogger.h; sourceTree = "<group>"; };
 		89D35146DCAB8D84F125F4C7CA205D60 /* CocoaLumberjack-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaLumberjack-dummy.m"; sourceTree = "<group>"; };
 		89E955B9A56B9D4B14287238869B0FCC /* Pods-iOS_ExampleUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iOS_ExampleUITests-umbrella.h"; sourceTree = "<group>"; };
-		8A604CF161C98856C90DCF287675D46F /* GCDWebServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GCDWebServer.framework; path = GCDWebServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A604CF161C98856C90DCF287675D46F /* GCDWebServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GCDWebServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0306818055021F4091F4F9A10ACF65 /* Croissant-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Croissant-Info.plist"; sourceTree = "<group>"; };
 		8B815606A98F98D1B562E9C06114F19B /* fishhook-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "fishhook-prefix.pch"; sourceTree = "<group>"; };
 		8BAA6AE39D0F7CE33C2CBCF44B1BE20F /* Croissant.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = Croissant.bundle; path = Croissant/Assets/Croissant.bundle; sourceTree = "<group>"; };
 		8DD31C25507FB2D2507601D77F71F6D7 /* Croissant-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Croissant-prefix.pch"; sourceTree = "<group>"; };
 		8E19557D0AACD57E12A92DA8AA680615 /* Croissant-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Croissant-umbrella.h"; sourceTree = "<group>"; };
-		8E41AC1863D671B93928BA50E8DE7CF3 /* PocketSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PocketSocket.framework; path = PocketSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E41AC1863D671B93928BA50E8DE7CF3 /* PocketSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PocketSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E6C4DC2709C91B9D237BB5F951AB497 /* GCDWebServerURLEncodedFormRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerURLEncodedFormRequest.m; path = GCDWebServer/Requests/GCDWebServerURLEncodedFormRequest.m; sourceTree = "<group>"; };
 		8F0732B51033257DDE6F88EEBDC9822F /* GCDWebServer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GCDWebServer.xcconfig; sourceTree = "<group>"; };
 		8F416D6C8758B2C20B1EBEB54476004B /* PSWebSocketNetworkThread.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PSWebSocketNetworkThread.h; path = PocketSocket/PSWebSocketNetworkThread.h; sourceTree = "<group>"; };
@@ -448,7 +450,7 @@
 		9A8790CE6E5ACC31A1953525BCE20127 /* PocketSocket-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PocketSocket-umbrella.h"; sourceTree = "<group>"; };
 		9ACFEDE0D7B4A58B04EA78CF85F8F99A /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = Source/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
 		9C7E72B4E5BCBE1B76B0A24B1DE941A3 /* GCDWebServerFileRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerFileRequest.h; path = GCDWebServer/Requests/GCDWebServerFileRequest.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9D9D0EB908002F40C77266F4E378BF9E /* PocketSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PocketSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F15F25C23ACABC639CAE5EBBF981DCC /* PocketSocket-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PocketSocket-Info.plist"; sourceTree = "<group>"; };
 		9FC885004547E02CA230E4C308568531 /* CocoaLumberjack.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CocoaLumberjack.modulemap; sourceTree = "<group>"; };
@@ -462,20 +464,20 @@
 		A682DA9C5ADE02897C6D8A40BF2B7ABB /* GCDWebServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GCDWebServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6D352F7A4873C6AA8BD43D1C612FD4D /* CocoaAsyncSocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.xcconfig; sourceTree = "<group>"; };
 		A7932832E0EEF80418D422EB2EF81805 /* CocoaLumberjack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CocoaLumberjack.h; path = "Sources/CocoaLumberjack/Supporting Files/CocoaLumberjack.h"; sourceTree = "<group>"; };
-		ABE4042506CE28E9CFBB1FEED268FF99 /* Pods_iOS_ExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_iOS_ExampleUITests.framework; path = "Pods-iOS_ExampleUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABE4042506CE28E9CFBB1FEED268FF99 /* Pods_iOS_ExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_ExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC4C3BFC7BA02C5B3440E424DE7D8880 /* Pods-iOS_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iOS_Example-frameworks.sh"; sourceTree = "<group>"; };
 		ACFA16ABB1CFEE325D719E4B2BB34D29 /* HTTPMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTTPMessage.m; path = Core/HTTPMessage.m; sourceTree = "<group>"; };
 		ADE4DE6EF19DA2E2C9F1A70D0482ACC5 /* CocoaHTTPServer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CocoaHTTPServer-Info.plist"; sourceTree = "<group>"; };
 		AE3979ABF24C71E6548A44F9DC8EDFDE /* DDData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDData.h; path = Core/Categories/DDData.h; sourceTree = "<group>"; };
-		B06D4A373624C5C0314BFD4F1EF3EBD9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		B06D4A373624C5C0314BFD4F1EF3EBD9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B1582835DCAF5E6A58B8D58D6563AA8E /* MultipartMessageHeaderField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MultipartMessageHeaderField.h; path = Core/Mime/MultipartMessageHeaderField.h; sourceTree = "<group>"; };
 		B9AAE86D2D371DDD85D6106664E35A8B /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDAbstractDatabaseLogger.h; path = Sources/CocoaLumberjack/include/DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
-		BAF2D4DC364A1F9AFA433F774AF86657 /* Croissant.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Croissant.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BAF2D4DC364A1F9AFA433F774AF86657 /* Croissant.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Croissant.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BD7156F9932FA05445A7E969B79D1013 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Source/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
 		BD93FD8D683D57140EBCAC594A1D7C1D /* GCDAsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Source/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
 		BF361FEE8B1112709885E8717534F3C8 /* Pods-iOS_ExampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iOS_ExampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BFF5B98E02C7DC6B8E53900424B36947 /* GCDWebServerDataRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerDataRequest.m; path = GCDWebServer/Requests/GCDWebServerDataRequest.m; sourceTree = "<group>"; };
-		C23E9CE9D1ACB68D9836EB31DC703EF2 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoaLumberjack.framework; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C23E9CE9D1ACB68D9836EB31DC703EF2 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24B7D07DCE99D90A9EDA5C22ADBF455 /* GCDWebServer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GCDWebServer-prefix.pch"; sourceTree = "<group>"; };
 		C4158AE9C0DC079894B6CF5EFFC6BCE0 /* Pods-iOS_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iOS_Example.modulemap"; sourceTree = "<group>"; };
 		C5390B17BE13B1D52E68EB48837DF89F /* DDLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDLog.m; path = Sources/CocoaLumberjack/DDLog.m; sourceTree = "<group>"; };
@@ -492,7 +494,7 @@
 		CE478ED1DF44673151C361619C5A7426 /* PSWebSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PSWebSocket.m; path = PocketSocket/PSWebSocket.m; sourceTree = "<group>"; };
 		CF75A7018FBF80A6F77A1FAE877D6167 /* HTTPServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTTPServer.m; path = Core/HTTPServer.m; sourceTree = "<group>"; };
 		D04D82BD0D6AE1EFD7B41AF5CE9E7DE8 /* DDData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDData.m; path = Core/Categories/DDData.m; sourceTree = "<group>"; };
-		D082E68E4A72497C325E1E34E7DF58BB /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoaAsyncSocket.framework; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D082E68E4A72497C325E1E34E7DF58BB /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E6307A1333905CC9340857C7018920 /* Pods-iOS_ExampleTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iOS_ExampleTests-umbrella.h"; sourceTree = "<group>"; };
 		D158195F533E13D7AEAC12C35CEAB3B5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		D1EF402C7EDF22F3E784BEB6D08B207B /* CocoaLumberjack.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaLumberjack.xcconfig; sourceTree = "<group>"; };
@@ -502,7 +504,7 @@
 		D7C8E7A58152AB03ABD6C6294E9949E0 /* GCDWebServerDataResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerDataResponse.h; path = GCDWebServer/Responses/GCDWebServerDataResponse.h; sourceTree = "<group>"; };
 		D8C6AD7E407A19BC11E1E7412871B9F0 /* PSWebSocketUTF8Decoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PSWebSocketUTF8Decoder.m; path = PocketSocket/PSWebSocketUTF8Decoder.m; sourceTree = "<group>"; };
 		D9903B2F78C2634C0355B621B13D5564 /* DDLogMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLogMacros.h; path = Sources/CocoaLumberjack/include/DDLogMacros.h; sourceTree = "<group>"; };
-		DDAC7E2EF7FD75B7FCBAB10A68841DFC /* fishhook.c */ = {isa = PBXFileReference; includeInIndex = 1; path = fishhook.c; sourceTree = "<group>"; };
+		DDAC7E2EF7FD75B7FCBAB10A68841DFC /* fishhook.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
 		DE6E6DD5B879B439DDBFA8861F1C1412 /* PocketSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PocketSocket-prefix.pch"; sourceTree = "<group>"; };
 		DFC1CEC466B7C2AB9F917E3D6D42A488 /* Pods-iOS_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iOS_Example-dummy.m"; sourceTree = "<group>"; };
 		E047AA9B0F7C062B6D45FAAF96865452 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
@@ -516,6 +518,8 @@
 		E5446170761AD377DB809480B33E5039 /* CocoaLumberjack-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaLumberjack-umbrella.h"; sourceTree = "<group>"; };
 		E73C59554176DEAFB4C03B95CD249200 /* PSWebSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PSWebSocket.h; path = PocketSocket/PSWebSocket.h; sourceTree = "<group>"; };
 		E82A18839C5D0DECA83DCF27C5500056 /* DDLoggerNames.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLoggerNames.h; path = Sources/CocoaLumberjack/include/DDLoggerNames.h; sourceTree = "<group>"; };
+		E94A0730234E25E900E1860C /* CRMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRMessage.h; sourceTree = "<group>"; };
+		E94A0731234E25E900E1860C /* CRMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRMessage.m; sourceTree = "<group>"; };
 		E94B0CAB396471EDE04D4EB3A314CFCA /* PocketSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PocketSocket-dummy.m"; sourceTree = "<group>"; };
 		E9DB69E06170DF27EEEB02107D48E169 /* HTTPResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTTPResponse.h; path = Core/HTTPResponse.h; sourceTree = "<group>"; };
 		E9F00649F259E14EF3B1993438F62917 /* GCDWebServerURLEncodedFormRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerURLEncodedFormRequest.h; path = GCDWebServer/Requests/GCDWebServerURLEncodedFormRequest.h; sourceTree = "<group>"; };
@@ -707,7 +711,6 @@
 				3A2DEFBF62F253D4093BD35C0EC501D4 /* WebSocket.m */,
 				0E0069C55B60385ED46C25EE304B2A5F /* Support Files */,
 			);
-			name = CocoaHTTPServer;
 			path = CocoaHTTPServer;
 			sourceTree = "<group>";
 		};
@@ -786,7 +789,6 @@
 				4519E1E045A1437333C191445808235D /* fishhook.h */,
 				03004C4656D2186C1D847795D995C9F7 /* Support Files */,
 			);
-			name = fishhook;
 			path = fishhook;
 			sourceTree = "<group>";
 		};
@@ -862,7 +864,6 @@
 				2C8045F91F976333B9E042FEBA85FEB9 /* Core */,
 				0BDFEB7FE028C96BF323609B33DB5B98 /* Support Files */,
 			);
-			name = CocoaLumberjack;
 			path = CocoaLumberjack;
 			sourceTree = "<group>";
 		};
@@ -980,7 +981,7 @@
 			path = "Target Support Files/Pods-iOS_ExampleTests";
 			sourceTree = "<group>";
 		};
-		8AA3989530BE828E0C70F1FB6FD7617F /* SERVER */ = {
+		8AA3989530BE828E0C70F1FB6FD7617F /* Server */ = {
 			isa = PBXGroup;
 			children = (
 				E3537435C0FFA86ECB89D83FE7643688 /* CRServer.h */,
@@ -988,8 +989,8 @@
 				97D700064D21CD840ED6C18B612665B6 /* CRServerResource.h */,
 				4B95F4BB7A706E7599DA9FA26E4DF7C0 /* CRServerResource.m */,
 			);
-			name = SERVER;
-			path = Croissant/Classes/SERVER;
+			name = Server;
+			path = Croissant/Classes/Server;
 			sourceTree = "<group>";
 		};
 		8FE82C0C7FD44077A802580AE6E71C56 /* Pod */ = {
@@ -1029,14 +1030,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		A0971F34BA7033F9507ABD4DF41B758A /* INSPECTOR */ = {
+		A0971F34BA7033F9507ABD4DF41B758A /* Inspector */ = {
 			isa = PBXGroup;
 			children = (
 				0A2C232D0F87E67884EBE91286132596 /* CRInspector.h */,
 				57FD4621B4F638588B35FC3EC98AE87F /* CRInspector.m */,
 			);
-			name = INSPECTOR;
-			path = Croissant/Classes/INSPECTOR;
+			name = Inspector;
+			path = Croissant/Classes/Inspector;
 			sourceTree = "<group>";
 		};
 		A631B1099807058A8DC674FC214EC5E3 /* Targets Support Files */ = {
@@ -1066,7 +1067,6 @@
 				FD736EA7013AB6569D4104505620A5A2 /* Core */,
 				5F681A1662AFD212965507087F5AF258 /* Support Files */,
 			);
-			name = GCDWebServer;
 			path = GCDWebServer;
 			sourceTree = "<group>";
 		};
@@ -1090,7 +1090,6 @@
 				7FCFEF4483588D248272CCA71F2E092F /* Server */,
 				95E6A41E2674BFC52EDAB3B37DC6676D /* Support Files */,
 			);
-			name = PocketSocket;
 			path = PocketSocket;
 			sourceTree = "<group>";
 		};
@@ -1103,8 +1102,16 @@
 				C887A5A4A81898C8AED962C666E912F2 /* GCDAsyncUdpSocket.m */,
 				2A44870C0F4FFC628FC04F5D2E91B39C /* Support Files */,
 			);
-			name = CocoaAsyncSocket;
 			path = CocoaAsyncSocket;
+			sourceTree = "<group>";
+		};
+		E94A072F234E25BA00E1860C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E94A0730234E25E900E1860C /* CRMessage.h */,
+				E94A0731234E25E900E1860C /* CRMessage.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		ED7D0E28FE303561B077622BC1A05B43 /* Croissant */ = {
@@ -1112,10 +1119,11 @@
 			children = (
 				6148696008AD3E41A8B9B5B899F0D191 /* Croissant.h */,
 				4EDBBB6CBCD0654EE0561F96701C143F /* Croissant.m */,
-				A0971F34BA7033F9507ABD4DF41B758A /* INSPECTOR */,
+				E94A072F234E25BA00E1860C /* Model */,
+				A0971F34BA7033F9507ABD4DF41B758A /* Inspector */,
 				8FE82C0C7FD44077A802580AE6E71C56 /* Pod */,
 				5891AB1F7738FFE9A3FE0F3EAF0F94DC /* Resources */,
-				8AA3989530BE828E0C70F1FB6FD7617F /* SERVER */,
+				8AA3989530BE828E0C70F1FB6FD7617F /* Server */,
 				24F5135EF1A1E24025830ABEC689CBC4 /* Support Files */,
 			);
 			name = Croissant;
@@ -1283,6 +1291,7 @@
 				B737D2F66EF279DA868874F1CE875C2C /* CocoaAsyncSocket-umbrella.h in Headers */,
 				C8B1364C49BE29F052D1CDB2E422B25F /* GCDAsyncSocket.h in Headers */,
 				995BE9CDDDDFD10773D5D190D6D3F722 /* GCDAsyncUdpSocket.h in Headers */,
+				E94A0732234E25E900E1860C /* CRMessage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1669,6 +1678,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E94A0733234E25E900E1860C /* CRMessage.m in Sources */,
 				BE13B2DCAD07AEAC9750C48D82CAA003 /* CocoaAsyncSocket-dummy.m in Sources */,
 				D971FBC8F598DE89CCC5E80A6C522726 /* GCDAsyncSocket.m in Sources */,
 				6911A88D599137122755AB4DF52C968E /* GCDAsyncUdpSocket.m in Sources */,

@@ -89,7 +89,7 @@
 
 - (void)setUpSocket
 {
-    self.socketServer = [PSWebSocketServer serverWithHost:nil port:8080];
+    self.socketServer = [PSWebSocketServer serverWithHost:nil port:8980];
     self.socketServer.delegate = self;
 }
 
