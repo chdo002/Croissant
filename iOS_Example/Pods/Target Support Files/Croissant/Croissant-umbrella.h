@@ -12,6 +12,10 @@
 
 #import "Croissant.h"
 #import "CRInspector.h"
+#import "CRAuthenticationChallengeSender.h"
+#import "CRHttpModel.h"
+#import "CRURLProtocol.h"
+#import "NSURLSessionConfiguration+CRInspector.h"
 #import "CRServer.h"
 #import "CRServerResource.h"
 

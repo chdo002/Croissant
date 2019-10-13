@@ -6,8 +6,8 @@
 //
 
 #import "CRInspector.h"
-
 #import "fishhook.h"
+#import "CRURLProtocol.h"
 
 @implementation CRInspector
 
@@ -48,7 +48,7 @@ void cr_nslog(NSString *format, ...) {
 
 - (void)hookNetWork
 {
-    
+    [NSURLProtocol registerClass:CRURLProtocol.class];
 }
 
 @end

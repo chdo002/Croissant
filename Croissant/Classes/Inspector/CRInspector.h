@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) void(^logCallBack)(NSString *log);
 
 - (void)hookNSLog;
+- (void)hookNetWork;
 
 @end
 

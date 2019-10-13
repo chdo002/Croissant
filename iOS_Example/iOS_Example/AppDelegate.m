@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Croissant/Croissant.h>
+//@import netfox;
 
 @interface AppDelegate ()
 
@@ -18,6 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+     
+//    [NFX.sharedInstance start]; // in didFinishLaunchingWithOptions:
     
     Croissant.shareInstance.enabled = YES;
     

@@ -61,6 +61,8 @@ static Croissant *share;
 {
     [CRInspector.shareInstance hookNSLog];
     
+    [CRInspector.shareInstance hookNetWork];
+    
     // 日志
     CRInspector.shareInstance.logCallBack = ^(NSString * _Nonnull log) {
         NSDictionary *logDic = @{
