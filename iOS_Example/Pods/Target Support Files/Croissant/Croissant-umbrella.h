@@ -12,6 +12,7 @@
 
 #import "Croissant.h"
 #import "CRInspector.h"
+#import "CRLogger.h"
 #import "CRAuthenticationChallengeSender.h"
 #import "CRHttpModel.h"
 #import "CRURLProtocol.h"

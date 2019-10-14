@@ -47,7 +47,7 @@ DEPENDENCIES:
   - Croissant (from `../`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - AFNetworking
     - Alamofire
     - CocoaAsyncSocket
@@ -74,4 +74,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: cbbe71fcf19c56eddb6f163cdc9088b430625487
 
-COCOAPODS: 1.6.2
+COCOAPODS: 1.8.3

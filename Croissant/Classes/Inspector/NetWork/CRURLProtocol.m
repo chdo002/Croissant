@@ -9,6 +9,8 @@
 #import "CRHttpModel.h"
 #import "CRAuthenticationChallengeSender.h"
 #import "NSURLSessionConfiguration+CRInspector.h"
+#import "CRLogger.h"
+#import "CRInspector.h"
 
 @interface CRURLProtocol()<NSURLSessionDataDelegate>
 
@@ -93,7 +95,9 @@
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler
 {
-    self.httpModel.response = response;
+    if ([response isKindOfClass:NSHTTPURLResponse.class]) {
+        self.httpModel.response = response;
+    }
     
     [self.client URLProtocol:self didReceiveResponse:response cacheStoragePolicy:NSURLCacheStorageAllowed];
     completionHandler(NSURLSessionResponseAllow);
@@ -101,8 +105,9 @@
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
 {
-    
-//
+    if (CRInspector.shareInstance.networkCallBack){
+        CRInspector.shareInstance.networkCallBack(self.httpModel);
+    }
     
     if (error) {
         [self.client URLProtocol:self didFailWithError:error];

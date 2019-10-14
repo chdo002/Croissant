@@ -9,8 +9,8 @@
 #import "ViewController.h"
 #import <Croissant/Croissant.h>
 #import <AFNetworking/AFNetworking.h>
-//#import "iOS_Example-Swift.h"
-#import "Host-Swift.h"
+#import "iOS_Example-Swift.h"
+//#import "Host-Swift.h"
 
 @interface ViewController ()
 
@@ -25,11 +25,9 @@
     
     
     if (@available(iOS 10.0, *)) {
-        self.timer = [NSTimer scheduledTimerWithTimeInterval:1
-                                                     repeats:YES
-                                                       block:^(NSTimer * _Nonnull timer) {
-            [self request];
-        }];
+        void(^timer)(NSTimer *timer) = ^(NSTimer *timer) { [self request]; };
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:timer];
+        
     } else {
         // Fallback on earlier versions
     }

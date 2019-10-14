@@ -17,4 +17,11 @@
     return _responseData;
 }
 
+- (NSDictionary *)descriptionDic
+{
+    NSString *url = self.request.URL.absoluteString;
+    NSString *contentStr = [[NSString alloc] initWithData:self.responseData.copy encoding:NSUTF8StringEncoding];
+    
+}
+
 @end
