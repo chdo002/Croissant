@@ -2,11 +2,15 @@
 var http = require('http');
 
 http.createServer(function (request, response) {
-
-    response.writeHead(200, {'Content-Type': 'text/plain'});
-    let res = request.url.split("/?")
-    let res2 = res[1].split("=")[1];
-    response.end(res2);
+                  let res = request.url.split("/?");
+                  let res2 = res[1].split("=")[1];
+                  console.log("收到" + res2);
+    setTimeout(function(){
+             response.writeHead(200, {'Content-Type': 'text/plain'});
+             
+             response.end(res2);
+               console.log("返回"+res2);
+    },1000)
 }).listen(8888);
 
 // 终端打印如下信息

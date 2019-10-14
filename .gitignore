@@ -35,3 +35,5 @@ Carthage/Build
 # `pod install` in .travis.yml
 #
 Pods/
+Host/Pods/
+iOS_Example/Pods
