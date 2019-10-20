@@ -66,6 +66,7 @@
 - (void)startLoading
 {
     NSMutableURLRequest *updateRequest = self.request.mutableCopy;
+    
     [NSURLProtocol setProperty:@1 forKey:CRURLProtocol.crurlInternalKey inRequest:updateRequest];
     
     self.httpModel.request = updateRequest.copy;
@@ -78,7 +79,7 @@
     [self.session getTasksWithCompletionHandler:^(NSArray<NSURLSessionDataTask *> * _Nonnull dataTasks,
                                                   NSArray<NSURLSessionUploadTask *> * _Nonnull uploadTasks,
                                                   NSArray<NSURLSessionDownloadTask *> * _Nonnull downloadTasks)
-    {
+     {
         for (NSURLSessionTask *task in dataTasks) {
             [task cancel];
         }
@@ -105,6 +106,8 @@
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
 {
+    self.httpModel.error = error;
+    
     if (CRInspector.shareInstance.networkCallBack){
         CRInspector.shareInstance.networkCallBack(self.httpModel);
     }
@@ -131,8 +134,7 @@
 - (void)URLSession:(NSURLSession *)session didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler
 {
     CRAuthenticationChallengeSender *sender = [CRAuthenticationChallengeSender sender:completionHandler];
-    NSURLAuthenticationChallenge *wrappedChallenge = [[NSURLAuthenticationChallenge alloc] initWithAuthenticationChallenge:challenge
-                                                                                                                    sender:sender];
+    NSURLAuthenticationChallenge *wrappedChallenge = [NSURLAuthenticationChallenge.alloc initWithAuthenticationChallenge:challenge sender:sender];
     [self.client URLProtocol:self didReceiveAuthenticationChallenge:wrappedChallenge];
 }
 

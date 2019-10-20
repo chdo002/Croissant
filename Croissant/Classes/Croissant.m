@@ -72,19 +72,21 @@ static Croissant *share;
         NSError *parseError = nil;
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:logDic options:NSJSONWritingPrettyPrinted error:&parseError];
         NSString *message = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        
         [CRServer.shareInstance sendMessage:message];
     };
     
     // 请求
     CRInspector.shareInstance.networkCallBack = ^(CRHttpModel * _Nonnull model) {
         
-        
-        NSData *data = model.responseData.copy;
-        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        
-        NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        
-//        CRLog(@"%@",dic);
+        NSDictionary *logDic = @{
+            @"type":@0,
+            @"content":model.descriptionDic ?: @""
+        };
+        NSError *parseError = nil;
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:logDic options:NSJSONWritingPrettyPrinted error:&parseError];
+        NSString *message = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        [CRServer.shareInstance sendMessage:message];
     };
 }
 

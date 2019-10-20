@@ -11,17 +11,14 @@
 
 @implementation CRLogger
 
-
 void CRLog(NSString *format, ...)
 {
     va_list vl;
     va_start(vl, format);
     NSString* str = [[NSString alloc] initWithFormat:format arguments:vl];
     va_end(vl);
-    
     orig_nslog(str);
 }
-
 
 + (void)hookNSLog
 {
@@ -44,6 +41,5 @@ void cr_nslog(NSString *format, ...) {
         CRInspector.shareInstance.logCallBack(str);
     }
 }
-
 
 @end

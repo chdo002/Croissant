@@ -15,7 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSHTTPURLResponse *response;
 
-@property (nonatomic, strong) NSMutableData *responseData;
+@property (nonatomic, strong, nullable) NSMutableData *responseData;
+
+@property (nonatomic, strong, nullable) NSError *error;
 
 - (NSDictionary *)descriptionDic;
 
