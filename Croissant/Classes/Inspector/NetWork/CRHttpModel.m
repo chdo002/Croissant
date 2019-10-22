@@ -20,16 +20,20 @@
 - (NSDictionary *)descriptionDic
 {
     NSString *url = self.request.URL.absoluteString;
-    NSString *contentStr = [[NSString alloc] initWithData:self.responseData.copy encoding:NSUTF8StringEncoding];
     
     NSMutableDictionary *descDic = [NSMutableDictionary dictionaryWithDictionary:@{
         @"request":@{
                 @"url":url,
                 @"HeaderFields":self.request.allHTTPHeaderFields,
                 @"HTTPMethod":self.request.HTTPMethod
-        },
-        @"data":contentStr ?: @""
+        }
     }];
+    if (self.responseData) {
+        NSString *contentStr = [[NSString alloc] initWithData:self.responseData.copy encoding:NSUTF8StringEncoding];
+        [descDic addEntriesFromDictionary:@{
+            @"reponseData":contentStr ?: @""
+        }];
+    }
     if (self.response) {
         [descDic addEntriesFromDictionary:@{
             @"response":@{

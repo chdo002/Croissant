@@ -25,9 +25,13 @@
     
     
     if (@available(iOS 10.0, *)) {
-        void(^timer)(NSTimer *timer) = ^(NSTimer *timer) { [self request]; };
+        void(^timer)(NSTimer *timer) = ^(NSTimer *timer) { [self request];
+            
+        };
         self.timer = [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:timer];
-        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.timer invalidate];
+        });
     } else {
         // Fallback on earlier versions
     }
@@ -52,7 +56,6 @@
                                                             NSError *  error)
                                   {
         NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        
         NSLog(@"收到：%@ -- %@",response.URL.absoluteURL,str);
     }];
     NSLog(@"发送：%@",path);
@@ -61,9 +64,7 @@
 }
 
 - (IBAction)shareAction:(id)sender {
-    
     [Croissant.shareInstance shareServeURL];
-    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
