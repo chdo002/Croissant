@@ -19,6 +19,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong, nullable) NSError *error;
 
+@property (nonatomic, copy) NSString *uuid;
+
+@property (nonatomic, strong) NSDate *startDate;
+
+@property (nonatomic, strong) NSDate *endDate;
+
 - (NSDictionary *)descriptionDic;
 
 @end

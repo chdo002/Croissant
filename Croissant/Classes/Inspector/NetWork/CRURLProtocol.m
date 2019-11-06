@@ -71,6 +71,8 @@
     
     self.httpModel.request = updateRequest.copy;
     
+    self.httpModel.startDate = NSDate.date;
+    
     [[self.session dataTaskWithRequest:self.httpModel.request] resume];
 }
 
@@ -107,7 +109,7 @@
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
 {
     self.httpModel.error = error;
-    
+    self.httpModel.endDate = NSDate.date;
     if (CRInspector.shareInstance.networkCallBack){
         CRInspector.shareInstance.networkCallBack(self.httpModel);
     }

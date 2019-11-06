@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import <Croissant/Croissant.h>
+#import <MetricKit/MetricKit.h>
+
 //@import netfox;
 
 @interface AppDelegate ()
@@ -21,7 +23,7 @@
     // Override point for customization after application launch.
      
 //    [NFX.sharedInstance start]; // in didFinishLaunchingWithOptions:
-    
+    [MXMetricManager.sharedManager addSubscriber:self];
     Croissant.shareInstance.enabled = YES;
     
     return YES;

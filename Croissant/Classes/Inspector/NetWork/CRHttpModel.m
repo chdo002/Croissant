@@ -8,7 +8,14 @@
 #import "CRHttpModel.h"
 
 @implementation CRHttpModel
-
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.uuid = NSUUID.UUID.UUIDString;
+    }
+    return self;
+}
 - (NSMutableData *)responseData
 {
     if (!_responseData) {
@@ -25,7 +32,9 @@
         @"request":@{
                 @"url":url,
                 @"HeaderFields":self.request.allHTTPHeaderFields,
-                @"HTTPMethod":self.request.HTTPMethod
+                @"HTTPMethod":self.request.HTTPMethod,
+                @"uuid":self.uuid,
+                @"timeStamp":@([self.startDate timeIntervalSince1970])
         }
     }];
     if (self.responseData) {
@@ -40,6 +49,7 @@
                     @"statusCode":@(self.response.statusCode) ?: @"",
                     @"HeaderFields":self.response.allHeaderFields ?: @"",
                     @"MIMEType":self.response.MIMEType ?: @"",
+                    @"timeStamp":@([self.endDate timeIntervalSince1970])
             }
         }];
     } else if (self.error){

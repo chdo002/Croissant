@@ -70,8 +70,10 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     NSLog(@"%@",event.description);
-    SViewController *vc = SViewController.alloc.init;
-    [self.navigationController pushViewController:vc animated:YES];
+    [self request];
+//
+//    SViewController *vc = SViewController.alloc.init;
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end
