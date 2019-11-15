@@ -27,10 +27,13 @@
 - (NSDictionary *)descriptionDic
 {
     NSString *url = self.request.URL.absoluteString;
+
+    id responseObject = [NSJSONSerialization JSONObjectWithData:self.request.HTTPBody options:0 error:nil];
     
     NSMutableDictionary *descDic = [NSMutableDictionary dictionaryWithDictionary:@{
         @"request":@{
                 @"url":url,
+                @"httpBody":responseObject ?: @"",
                 @"HeaderFields":self.request.allHTTPHeaderFields,
                 @"HTTPMethod":self.request.HTTPMethod,
                 @"uuid":self.uuid,

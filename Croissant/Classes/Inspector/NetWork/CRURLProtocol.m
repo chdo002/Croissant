@@ -12,6 +12,16 @@
 #import "CRLogger.h"
 #import "CRInspector.h"
 
+NSCache *crRequestCache()
+{
+    static dispatch_once_t onceToken;
+    static NSCache *cache;
+    dispatch_once(&onceToken, ^{
+        cache = NSCache.new;
+    });
+    return cache;
+}
+
 @interface CRURLProtocol()<NSURLSessionDataDelegate>
 
 @property (nonatomic, strong) NSURLSession *session;
@@ -24,7 +34,7 @@
 
 + (void)load
 {
-    [NSURLSessionConfiguration swizzleDefault];
+//    [NSURLSessionConfiguration swizzleDefault];
 }
 
 + (NSString *)crurlInternalKey
@@ -34,6 +44,7 @@
 
 + (BOOL)canInitWithTask:(NSURLSessionTask *)task
 {
+    NSUInteger asdf = task.taskIdentifier;
     return [self canMockRequest:task.currentRequest];
 }
 
@@ -67,6 +78,7 @@
 {
     NSMutableURLRequest *updateRequest = self.request.mutableCopy;
     
+    NSUInteger idd = self.task.taskIdentifier;
     [NSURLProtocol setProperty:@1 forKey:CRURLProtocol.crurlInternalKey inRequest:updateRequest];
     
     self.httpModel.request = updateRequest.copy;

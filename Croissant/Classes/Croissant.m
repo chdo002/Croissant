@@ -46,10 +46,10 @@ static Croissant *share;
     _enabled = enabled;
     if (enabled) {
         
-        [CRServer.shareInstance startWebServer];
-        [CRServer.shareInstance startSocket];
+//        [CRServer.shareInstance startWebServer];
+//        [CRServer.shareInstance startSocket];
         
-        [self setUpInspect];
+//        [self setUpInspect];
         
     } else {
         
