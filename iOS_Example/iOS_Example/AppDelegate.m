@@ -8,9 +8,6 @@
 
 #import "AppDelegate.h"
 #import <Croissant/Croissant.h>
-#import <MetricKit/MetricKit.h>
-
-//@import netfox;
 
 @interface AppDelegate ()
 

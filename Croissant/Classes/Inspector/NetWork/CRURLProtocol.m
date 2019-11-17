@@ -34,7 +34,7 @@ NSCache *crRequestCache()
 
 + (void)load
 {
-//    [NSURLSessionConfiguration swizzleDefault];
+    [NSURLSessionConfiguration swizzleDefault];
 }
 
 + (NSString *)crurlInternalKey
@@ -44,7 +44,6 @@ NSCache *crRequestCache()
 
 + (BOOL)canInitWithTask:(NSURLSessionTask *)task
 {
-    NSUInteger asdf = task.taskIdentifier;
     return [self canMockRequest:task.currentRequest];
 }
 
@@ -78,7 +77,6 @@ NSCache *crRequestCache()
 {
     NSMutableURLRequest *updateRequest = self.request.mutableCopy;
     
-    NSUInteger idd = self.task.taskIdentifier;
     [NSURLProtocol setProperty:@1 forKey:CRURLProtocol.crurlInternalKey inRequest:updateRequest];
     
     self.httpModel.request = updateRequest.copy;
