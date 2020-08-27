@@ -10,8 +10,6 @@ target 'iOS_Example' do
   # Pods for iOS_Example
   pod 'Croissant' , :path => '../'
   pod 'AFNetworking'
-  pod 'Alamofire'
-#  pod 'netfox'
   
   target 'iOS_ExampleTests' do
     inherit! :search_paths

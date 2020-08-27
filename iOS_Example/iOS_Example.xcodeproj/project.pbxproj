@@ -10,7 +10,6 @@
 		358664A70182C544F4587C5F /* Pods_iOS_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAE31AFA8AFD09549CFCE4 /* Pods_iOS_ExampleTests.framework */; };
 		89C4DED54F6B2E92F4DE089B /* Pods_iOS_ExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05D99FB83F46C1455393250 /* Pods_iOS_ExampleUITests.framework */; };
 		BCE39600C9ABA5FB4890C3CE /* Pods_iOS_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33FBB34B24C82BAEB86DFA98 /* Pods_iOS_Example.framework */; };
-		E984BFF32350D44D003725D6 /* SViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E984BFF22350D44D003725D6 /* SViewController.swift */; };
 		E9C4BD05230990260052065D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C4BD04230990260052065D /* AppDelegate.m */; };
 		E9C4BD08230990260052065D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C4BD07230990260052065D /* ViewController.m */; };
 		E9C4BD0B230990260052065D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9C4BD09230990260052065D /* Main.storyboard */; };
@@ -50,7 +49,6 @@
 		A05D99FB83F46C1455393250 /* Pods_iOS_ExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_ExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9094FED23536B54003D9F2D /* test_serve.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = test_serve.js; path = ../../test_serve.js; sourceTree = "<group>"; };
 		E984BFF12350D44C003725D6 /* iOS_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS_Example-Bridging-Header.h"; sourceTree = "<group>"; };
-		E984BFF22350D44D003725D6 /* SViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SViewController.swift; sourceTree = "<group>"; };
 		E9C4BD00230990260052065D /* iOS_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9C4BD03230990260052065D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E9C4BD04230990260052065D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -150,7 +148,6 @@
 				E9C4BD04230990260052065D /* AppDelegate.m */,
 				E9C4BD06230990260052065D /* ViewController.h */,
 				E9C4BD07230990260052065D /* ViewController.m */,
-				E984BFF22350D44D003725D6 /* SViewController.swift */,
 				E9C4BD09230990260052065D /* Main.storyboard */,
 				E9C4BD0C230990270052065D /* Assets.xcassets */,
 				E9C4BD0E230990270052065D /* LaunchScreen.storyboard */,
@@ -245,7 +242,7 @@
 		E9C4BCF8230990260052065D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = chdo;
 				TargetAttributes = {
 					E9C4BCFF230990260052065D = {
@@ -402,7 +399,6 @@
 			files = (
 				E9C4BD08230990260052065D /* ViewController.m in Sources */,
 				E9C4BD13230990270052065D /* main.m in Sources */,
-				E984BFF32350D44D003725D6 /* SViewController.swift in Sources */,
 				E9C4BD05230990260052065D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +480,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -543,6 +540,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -579,16 +577,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62N6ZZKK9A;
 				INFOPLIST_FILE = iOS_Example/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "chdo.iOS-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "iOS_Example/iOS_Example-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -602,15 +597,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62N6ZZKK9A;
 				INFOPLIST_FILE = iOS_Example/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "chdo.iOS-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "iOS_Example/iOS_Example-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -619,7 +612,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 37DEA62D1F7305990AAE3088 /* Pods-iOS_ExampleTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iOS_ExampleTests/Info.plist;
@@ -639,7 +631,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 806D4DDAF3A1B1BF277DD7D0 /* Pods-iOS_ExampleTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iOS_ExampleTests/Info.plist;
@@ -659,7 +650,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3E84E855DA4CE71067CC2EF4 /* Pods-iOS_ExampleUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iOS_ExampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -678,7 +668,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7C9D3BAEE1C4E545CFBF6355 /* Pods-iOS_ExampleUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iOS_ExampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

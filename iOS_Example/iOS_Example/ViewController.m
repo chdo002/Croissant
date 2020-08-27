@@ -9,8 +9,6 @@
 #import "ViewController.h"
 #import <Croissant/Croissant.h>
 #import <AFNetworking/AFNetworking.h>
-#import "iOS_Example-Swift.h"
-//#import "Host-Swift.h"
 
 @interface ViewController ()
 
@@ -116,7 +114,7 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     NSLog(@"%@",event.description);
-    [self request];
+    [self request2];
 //
 //    SViewController *vc = SViewController.alloc.init;
 //    [self.navigationController pushViewController:vc animated:YES];
