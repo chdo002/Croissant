@@ -47,7 +47,6 @@
 		8DE66CB3B672D4460D07D537 /* Pods-iOS_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Example.release.xcconfig"; path = "Target Support Files/Pods-iOS_Example/Pods-iOS_Example.release.xcconfig"; sourceTree = "<group>"; };
 		98EC90FD946949D6E2ADD94D /* Pods-iOS_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Example.debug.xcconfig"; path = "Target Support Files/Pods-iOS_Example/Pods-iOS_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A05D99FB83F46C1455393250 /* Pods_iOS_ExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_ExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9094FED23536B54003D9F2D /* test_serve.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = test_serve.js; path = ../../test_serve.js; sourceTree = "<group>"; };
 		E984BFF12350D44C003725D6 /* iOS_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS_Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		E9C4BD00230990260052065D /* iOS_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9C4BD03230990260052065D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -143,7 +142,6 @@
 		E9C4BD02230990260052065D /* iOS_Example */ = {
 			isa = PBXGroup;
 			children = (
-				E9094FED23536B54003D9F2D /* test_serve.js */,
 				E9C4BD03230990260052065D /* AppDelegate.h */,
 				E9C4BD04230990260052065D /* AppDelegate.m */,
 				E9C4BD06230990260052065D /* ViewController.h */,

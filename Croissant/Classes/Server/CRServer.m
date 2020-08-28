@@ -86,6 +86,10 @@
     }
 }
 
+- (void)stopWebServer
+{
+    [self.webServer stop];
+}
 
 - (void)setUpSocket
 {
@@ -96,6 +100,11 @@
 - (void)startSocket
 {
     [self.socketServer start];
+}
+
+- (void)stopSocket
+{
+    [self.socketServer stop];
 }
 
 - (void)sendMessage:(NSString *)message

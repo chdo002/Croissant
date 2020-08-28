@@ -27,11 +27,6 @@ static Croissant *share;
     return share;
 }
 
-+ (void)setShareInstance:(Croissant *)shareInstance
-{
-    share = shareInstance;
-}
-
 - (instancetype)init
 {
     self = [super init];
@@ -53,6 +48,8 @@ static Croissant *share;
         
     } else {
         
+        [CRServer.shareInstance stopWebServer];
+        [CRServer.shareInstance stopSocket];
         
     }
 }

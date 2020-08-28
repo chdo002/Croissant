@@ -7,9 +7,9 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'Croissant'
-  s.version          = '0.1.0alpha'
-  s.summary          = 'A short description of Croissant.'
+  s.name             = 'CDCroissant'
+  s.version          = '0.1.1alpha'
+  s.summary          = 'An App Inspector.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -39,7 +39,8 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit', 'CoreServices'
   
-#  s.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'DD_LEGACY_MACROS=1' }
+  # deal with CocoaHTTPServer Macros
+  s.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'DD_LEGACY_MACROS=1' }
 
   s.dependency 'GCDWebServer', '3.5.3'
   s.dependency 'fishhook'

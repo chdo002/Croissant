@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Croissant : NSObject
 
-@property (class, nonatomic, strong) Croissant *shareInstance;
+@property (class, nonatomic, strong, readonly) Croissant *shareInstance;
 
 @property (nonatomic, assign) BOOL enabled;
 

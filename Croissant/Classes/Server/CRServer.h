@@ -16,8 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NSURL *serveUrl;
 
 - (void)startWebServer;
+- (void)stopWebServer;
 
 - (void)startSocket;
+- (void)stopSocket;
 
 - (void)sendMessage:(NSString *)message;
 

@@ -1,6 +1,6 @@
 //
 //  CRLogger.m
-//  AFNetworking
+//  Croissant
 //
 //  Created by chdo on 2019/10/14.
 //
