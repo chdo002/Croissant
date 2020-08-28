@@ -17,13 +17,15 @@ Croissant is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'Croissant'
+pod 'CDCroissant'
 ```
 
 ## Understanding Croissant Architecture
 
 `Croissant`: receive `CRInspector` messages, and send to  `CRServer`
+
 `CRInspector`:   observe printing and network tracffic
+
 `CRServer` :   webserver, socket provider
 
 ## Author
