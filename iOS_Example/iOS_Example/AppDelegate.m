@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import <Croissant/Croissant.h>
+#import <CDCroissant/Croissant.h>
 
 @interface AppDelegate ()
 
